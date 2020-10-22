@@ -10,3 +10,7 @@ def text_process(mess):
     nopunc = ''.join(nopunc)
     
     return [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
+
+messages['message'].head(5).apply(text_process)
+
+messages.head()
