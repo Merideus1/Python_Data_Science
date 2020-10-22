@@ -1,0 +1,12 @@
+def text_process(mess):
+    """
+    1. Remove punctuation
+    2. Remove stop words
+    3. Return list of clean text words
+    """
+    
+    nopunc = [char for char in mess if char not in string.punctuation]
+    
+    nopunc = ''.join(nopunc)
+    
+    return [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
