@@ -32,3 +32,12 @@ print(bow4)
 print(bow4.shape)
 
 bow_transformer.get_feature_names()[9554]
+
+messages_bow = bow_transformer.transform(messages['message'])
+
+print('Shape of Spare Matrix: ', messages_bow.shape)
+
+messages_bow.nnz
+
+sparsity = (100.0 * messages_bow.nnz / (messages_bow.shape[0] * messages_bow.shape[1]))
+print('sparsity: {}'.format(sparsity))
