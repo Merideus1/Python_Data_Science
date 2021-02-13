@@ -1,0 +1,17 @@
+print(1, 2, 3, sep=' < ')
+#OUTPUT 1 < 2 < 3
+
+print(1, 2, 3)
+#OUPUT 1 2 3
+
+def greet(who="Colin"):
+    print("Hello,", who)
+    
+greet()
+greet(who="Kaggle")
+# (In this case, we don't need to specify the name of the argument, because it's unambiguous.)
+greet("world")
+#OUTPUT 
+#Hello, Colin
+#Hello, Kaggle
+#Hello, world
