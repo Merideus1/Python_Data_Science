@@ -37,3 +37,4 @@ print("Is -1 odd?", is_odd(-1))
 #Is -1 odd? True
 
 #Remember to use == instead of = when making comparisons. If you write n == 3 you are asking about the value of n. When you write n = 3 you are changing the value of n.
+# Using == 1 within the above code "return (n % 2) == 1" outputs a 'TRUE' or 'FALSE'; while without it the outputs become a '0' or a '1'.
