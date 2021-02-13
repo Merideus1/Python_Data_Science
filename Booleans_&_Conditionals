@@ -24,3 +24,5 @@ print("Can a 45-year-old run for president?", can_run_for_president(45))
 
 '3' == 3
 #OUTPUT FALSE
+
+#Remember to use == instead of = when making comparisons. If you write n == 3 you are asking about the value of n. When you write n = 3 you are changing the value of n.
