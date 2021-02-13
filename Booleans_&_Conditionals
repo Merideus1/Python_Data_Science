@@ -37,4 +37,12 @@ print("Is -1 odd?", is_odd(-1))
 #Is -1 odd? True
 
 #Remember to use == instead of = when making comparisons. If you write n == 3 you are asking about the value of n. When you write n = 3 you are changing the value of n.
+
 # Using == 1 within the above code "return (n % 2) == 1" outputs a 'TRUE' or 'FALSE'; while without it the outputs become a '0' or a '1'.
+
+#prepared_for_weather = have_umbrella or rain_level < 5 and have_hood or not rain_level > 0 and is_workday
+
+#I'm trying to say that I'm safe from today's weather....
+#if I have an umbrella...
+#or if the rain isn't too heavy and I have a hood...
+#otherwise, I'm still fine unless it's raining and it's a workday
