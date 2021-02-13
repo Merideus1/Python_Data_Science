@@ -29,3 +29,7 @@ help(least_difference)
     
     #The return value is an integer if ndigits is omitted or None.  Otherwise
     #the return value has the same type as the number.  ndigits may be negative.
+
+mystery = print()
+print(mystery)
+#OUTPUT None or Null
