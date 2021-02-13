@@ -1,0 +1,31 @@
+def least_difference(a, b, c):
+    """Return the smallest difference between any two numbers
+    among a, b and c.
+    
+    >>> least_difference(1, 5, -5)
+    4
+    """
+    diff1 = abs(a - b)
+    diff2 = abs(b - c)
+    diff3 = abs(a - c)
+    return min(diff1, diff2, diff3)
+
+help(least_difference)
+#OUTPUT 
+#Help on function least_difference in module __main__:
+
+#least_difference(a, b, c)
+    #Return the smallest difference between any two numbers
+    #among a, b and c.
+    
+    #>>> least_difference(1, 5, -5)
+    #4
+#Call help() to receive information on what the function can do/does
+#I.E. help(round)
+#Help on built-in function round in module builtins:
+
+#round(number, ndigits=None)
+    #Round a number to a given precision in decimal digits.
+    
+    #The return value is an integer if ndigits is omitted or None.  Otherwise
+    #the return value has the same type as the number.  ndigits may be negative.
