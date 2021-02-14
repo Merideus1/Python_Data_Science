@@ -82,3 +82,9 @@ t[0] = 100
 x = 0.125
 x.as_integer_ratio()
 #OUTPUT (1, 8)
+
+#These multiple return values can be individually assigned as follows:
+
+numerator, denominator = x.as_integer_ratio()
+print(numerator / denominator)
+#OUTPUT 0.125
