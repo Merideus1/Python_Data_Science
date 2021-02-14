@@ -33,3 +33,7 @@ for i in range(5):
 squares = [n**2 for n in range(10)]
 squares
 #OUTPUT [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+loud_short_planets = [planet.upper() + '!' for planet in planets if len(planet) < 6]
+loud_short_planets
+#OUTPUT ['VENUS!', 'EARTH!', 'MARS!']
