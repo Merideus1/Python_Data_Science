@@ -88,3 +88,11 @@ x.as_integer_ratio()
 numerator, denominator = x.as_integer_ratio()
 print(numerator / denominator)
 #OUTPUT 0.125
+
+#Finally we have some insight into the classic Stupid Python Trick™ for swapping two variables!
+
+a = 1
+b = 0
+a, b = b, a
+print(a, b)
+#OUTPUT 0 1
