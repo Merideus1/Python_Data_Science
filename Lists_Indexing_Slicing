@@ -74,3 +74,11 @@ t[0] = 100
 #----> 1 t[0] = 100
 
 #TypeError: 'tuple' object does not support item assignment
+
+#Tuples are often used for functions that have multiple return values.
+
+#For example, the as_integer_ratio() method of float objects returns a numerator and a denominator in the form of a tuple:
+
+x = 0.125
+x.as_integer_ratio()
+#OUTPUT (1, 8)
