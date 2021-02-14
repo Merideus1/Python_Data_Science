@@ -83,3 +83,4 @@ def exactly_one_topping(ketchup, mustard, onion):
     on their hot dog.
     """
     return (ketchup + mustard + onion) == 1
+#Fun fact: we don't technically need to call int on the arguments. Just by doing addition with booleans, Python implicitly does the integer conversion.
