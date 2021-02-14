@@ -7,3 +7,12 @@ Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune
 #the variable name to use (in this case, planet)
 #the set of values to loop over (in this case, planets)
 #You use the word "in" to link them together.
+
+#The object to the right of the "in" can be any object that supports iteration. Basically, if it can be thought of as a group of things, you can probably loop over it. In addition to lists, we can iterate over the elements of a tuple:
+
+multiplicands = (2, 2, 2, 3, 3, 5)
+product = 2
+for mult in multiplicands:
+    product = product * mult
+product
+#OUTPUT 720
