@@ -39,7 +39,8 @@ planets
 
 #In short, objects carry some things around with them. You access that stuff using Python's dot syntax.
 
-#For example, numbers in Python carry around an associated variable called imag representing their imaginary part. (You'll probably never need to use this unless you're doing some very weird math.)
+#For example, numbers in Python carry around an associated variable called imag representing their imaginary part. 
+#(You'll probably never need to use this unless you're doing some very weird math.)
 
 x = 12
 # x is a real number, so its imaginary part is 0.
