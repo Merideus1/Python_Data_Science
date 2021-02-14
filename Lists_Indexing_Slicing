@@ -50,3 +50,7 @@ print(c.imag)
 #OUTPUT
 #0
 #3.0
+
+#list.pop removes and returns the last element of a list:
+
+planets.pop()
