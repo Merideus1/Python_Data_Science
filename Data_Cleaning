@@ -56,3 +56,14 @@ print("Columns with na's dropped: %d" % columns_with_na_dropped.shape[1])
 # Columns in original dataset: 102 
 
 # Columns with na's dropped: 41
+
+# get a small subset of the NFL dataset
+subset_nfl_data = nfl_data.loc[:, 'EPA':'Season'].head()
+subset_nfl_data
+
+# replace all NA's with 0
+subset_nfl_data.fillna(0)
+
+# replace all NA's the value that comes directly after it in the same column, 
+# then replace all the remaining na's with 0
+subset_nfl_data.fillna(method='bfill', axis=0).fillna(0)
