@@ -15,3 +15,6 @@ import matplotlib.pyplot as plt
 # set seed for reproducibility
 np.random.seed(0)
 
+# in scaling, you're changing the range of your data, while
+# in normalization, you're changing the shape of the distribution of your data.
+
