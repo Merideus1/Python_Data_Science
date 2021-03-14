@@ -10,3 +10,11 @@ landslides = pd.read_csv("../input/landslide-events/catalog.csv")
 # set seed for reproducibility
 np.random.seed(0)
 
+landslides.head()
+
+# print the first few rows of the date column
+print(landslides['date'].head())
+
+# check the data type of our date column
+landslides['date'].dtype
+
