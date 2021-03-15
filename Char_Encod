@@ -53,3 +53,12 @@ with open("../input/kickstarter-projects/ks-projects-201801.csv", 'rb') as rawda
 print(result)
 
 # {'encoding': 'Windows-1252', 'confidence': 0.73, 'language': ''}
+
+# read in the file with the encoding detected by chardet
+kickstarter_2016 = pd.read_csv("../input/kickstarter-projects/ks-projects-201612.csv", encoding='Windows-1252')
+
+# look at the first few lines
+kickstarter_2016.head()
+
+# save our file (will be saved as UTF-8 by default!)
+kickstarter_2016.to_csv("ks-projects-201801-utf8.csv")
