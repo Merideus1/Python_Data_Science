@@ -1,0 +1,15 @@
+# modules we'll use
+import pandas as pd
+import numpy as np
+
+# helpful modules
+import fuzzywuzzy
+from fuzzywuzzy import process
+import chardet
+
+# read in all our data
+professors = pd.read_csv("../input/pakistan-intellectual-capital/pakistan_intellectual_capital.csv")
+
+# set seed for reproducibility
+np.random.seed(0)
+
