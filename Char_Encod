@@ -8,3 +8,6 @@ import chardet
 # set seed for reproducibility
 np.random.seed(0)
 
+# "mojibake" (said like mo-gee-bah-kay
+# æ–‡å—åŒ–ã??
+
