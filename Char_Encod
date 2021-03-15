@@ -1,0 +1,10 @@
+# modules we'll use
+import pandas as pd
+import numpy as np
+
+# helpful character encoding module
+import chardet
+
+# set seed for reproducibility
+np.random.seed(0)
+
