@@ -38,4 +38,9 @@ day_of_month_landslides = day_of_month_landslides.dropna()
 # plot the day of the month
 sns.distplot(day_of_month_landslides, kde=False, bins=31)
 
+date_lengths = earthquakes.Date.str.len()
+date_lengths.value_counts()
 
+indices = np.where([date_lengths == 24])[1]
+print('Indices with corrupted data:', indices)
+earthquakes.loc[indices]
