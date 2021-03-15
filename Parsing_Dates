@@ -32,4 +32,10 @@ landslides['date_parsed'] = pd.to_datetime(landslides['Date'], infer_datetime_fo
 day_of_month_landslides = landslides['date_parsed'].dt.day
 day_of_month_landslides.head()
 
+# remove na's
+day_of_month_landslides = day_of_month_landslides.dropna()
+
+# plot the day of the month
+sns.distplot(day_of_month_landslides, kde=False, bins=31)
+
 
