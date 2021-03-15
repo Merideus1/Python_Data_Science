@@ -62,3 +62,6 @@ kickstarter_2016.head()
 
 # save our file (will be saved as UTF-8 by default!)
 kickstarter_2016.to_csv("ks-projects-201801-utf8.csv")
+
+before = sample_entry.decode("big5-tw")
+new_entry = before.encode()
