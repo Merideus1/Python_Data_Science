@@ -13,3 +13,24 @@ professors = pd.read_csv("../input/pakistan-intellectual-capital/pakistan_intell
 # set seed for reproducibility
 np.random.seed(0)
 
+professors.head()
+
+# get all the unique values in the 'Country' column
+countries = professors['Country'].unique()
+
+# sort them alphabetically and then take a closer look
+countries.sort()
+countries
+
+# convert to lower case
+professors['Country'] = professors['Country'].str.lower()
+# remove trailing white spaces
+professors['Country'] = professors['Country'].str.strip()
+
+# get all the unique values in the 'Country' column
+countries = professors['Country'].unique()
+
+# sort them alphabetically and then take a closer look
+countries.sort()
+countries
+
