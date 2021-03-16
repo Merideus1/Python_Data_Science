@@ -71,4 +71,3 @@ countries = professors['Country'].unique()
 # sort them alphabetically and then take a closer look
 countries.sort()
 countries
-
