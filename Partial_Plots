@@ -27,4 +27,3 @@ pdp_goals = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feat
 # plot it
 pdp.pdp_plot(pdp_goals, 'Goal Scored')
 plt.show()
-
