@@ -10,3 +10,10 @@ feature_names = [i for i in data.columns if data[i].dtype in [np.int64]]
 X = data[feature_names]
 train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=1)
 tree_model = DecisionTreeClassifier(random_state=0, max_depth=5, min_samples_split=5).fit(train_X, train_y)
+
+
+from sklearn import tree
+import graphviz
+
+tree_graph = tree.export_graphviz(tree_model, out_file=None, feature_names=feature_names)
+graphviz.Source(tree_graph)
