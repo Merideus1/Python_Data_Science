@@ -144,5 +144,3 @@ perm = PermutationImportance(my_model).fit(predictors_df, my_df.y)
 
 # show the weights for the permutation importance you just calculated
 eli5.show_weights(perm, feature_names = ['X1', 'X2'])
-
-
