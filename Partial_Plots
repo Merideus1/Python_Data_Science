@@ -11,7 +11,6 @@ X = data[feature_names]
 train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=1)
 tree_model = DecisionTreeClassifier(random_state=0, max_depth=5, min_samples_split=5).fit(train_X, train_y)
 
-
 from sklearn import tree
 import graphviz
 
@@ -52,4 +51,10 @@ inter1  =  pdp.pdp_interact(model=tree_model, dataset=val_X, model_features=feat
 pdp.pdp_interact_plot(pdp_interact_out=inter1, feature_names=features_to_plot, plot_type='contour')
 plt.show()
 
+for feat_name in base_features:
+    pdp_dist = pdp.pdp_isolate(model=first_model, dataset=val_X,
+                               model_features=base_features, feature=feat_name)
+    pdp.pdp_plot(pdp_dist, feat_name)
+    plt.show()
+    
 
