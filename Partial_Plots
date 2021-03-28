@@ -93,4 +93,28 @@ pdp_dist = pdp.pdp_isolate(model=second_model, dataset=new_val_X, model_features
 pdp.pdp_plot(pdp_dist, feat_name)
 plt.show()
 
+import numpy as np
+from numpy.random import rand
+
+n_samples = 20000
+
+# Create array holding predictive feature
+X1 = 4 * rand(n_samples) - 2
+X2 = 4 * rand(n_samples) - 2
+# Create y. you should have X1 and X2 in the expression for y
+y = np.ones(n_samples)
+y = -2 * X1 * (X1<-1) + X1 - 2 * X1 * (X1>1) - X2
+
+# create dataframe because pdp_isolate expects a dataFrame as an argument
+my_df = pd.DataFrame({'X1': X1, 'X2': X2, 'y': y}) 
+predictors_df = my_df.drop(['y'], axis=1)
+
+my_model = RandomForestRegressor(n_estimators=30, random_state=1).fit(predictors_df, my_df.y)
+
+pdp_dist = pdp.pdp_isolate(model=my_model, dataset=my_df, model_features=['X1', 'X2'], feature='X1')
+
+# visualize your results
+pdp.pdp_plot(pdp_dist, 'X1')
+plt.show()
+
 
