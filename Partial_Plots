@@ -30,3 +30,19 @@ plt.show()
 
 # Like permutation importance, partial dependence plots are calculated after a model has been fit. The model is fit on real data that 
 # has not been artificially manipulated in any way.
+
+feature_to_plot = 'Distance Covered (Kms)'
+pdp_dist = pdp.pdp_isolate(model=tree_model, dataset=val_X, model_features=feature_names, feature=feature_to_plot)
+
+pdp.pdp_plot(pdp_dist, feature_to_plot)
+plt.show()
+
+# Build Random Forest model
+rf_model = RandomForestClassifier(random_state=0).fit(train_X, train_y)
+
+pdp_dist = pdp.pdp_isolate(model=rf_model, dataset=val_X, model_features=feature_names, feature=feature_to_plot)
+
+pdp.pdp_plot(pdp_dist, feature_to_plot)
+plt.show()
+
+
