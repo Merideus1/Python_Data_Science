@@ -1,3 +1,5 @@
+# sum(SHAP values for all features) = pred_for_team - pred_for_baseline_values
+
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
