@@ -16,7 +16,6 @@ row_to_show = 5
 data_for_prediction = val_X.iloc[row_to_show]  # use 1 row of data here. Could use multiple rows if desired
 data_for_prediction_array = data_for_prediction.values.reshape(1, -1)
 
-
 my_model.predict_proba(data_for_prediction_array)
 
 import shap  # package used to calculate Shap values
