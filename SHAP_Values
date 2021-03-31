@@ -65,3 +65,22 @@ explainer = shap.TreeExplainer(my_model)
 shap_values = explainer.shap_values(data_for_prediction)
 shap.initjs()
 shap.force_plot(explainer.expected_value[0], shap_values[0], data_for_prediction)
+
+# Now the doctors are convinced you have the right data, and the model overview looked reasonable. 
+# It's time to turn this into a finished product they can use. Specifically, the hospital wants you to create a function patient_risk_factors that does the following
+
+# Takes a single row with patient data (of the same format you as your raw data)
+# Creates a visualization showing what features of that patient increased their risk of readmission, what features decreased it, and how much those features mattered.
+
+import shap  # package used to calculate Shap values
+
+# data_for_prediction = val_X.iloc[0,:]  # use 1 row of data here. Could use multiple rows if desired
+
+sample_data_for_prediction = val_X.iloc[0].astype(float)  # to test function
+
+def patient_risk_factors(model, patient_data):
+    # Create object that can calculate shap values
+    explainer = shap.TreeExplainer(model)
+    shap_values = explainer.shap_values(patient_data)
+    shap.initjs()
+    return shap.force_plot(explainer.expected_value[1], shap_values[1], patient_data)
