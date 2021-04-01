@@ -27,3 +27,15 @@ shap.summary_plot(shap_values[1], val_X)
 
 # Calculating SHAP values can be slow. It isn't a problem here, because this dataset is small. But you'll want to be careful when running 
 # these to plot with reasonably sized datasets. The exception is when using an xgboost model, which SHAP has some optimizations for and which is thus much faster.
+
+import shap  # package used to calculate Shap values
+
+# Create object that can calculate shap values
+explainer = shap.TreeExplainer(my_model)
+
+# calculate shap values. This is what we will plot.
+shap_values = explainer.shap_values(X)
+
+# make plot.
+shap.dependence_plot('Ball Possession %', shap_values[1], X, interaction_index="Goal Scored")
+
