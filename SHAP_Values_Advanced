@@ -89,3 +89,12 @@ shap.summary_plot(shap_values[1], small_val_X)
 # doesn't map well to any intuitive sense of "importance" because it can be determined by just a few outliers. However if all dots on the graph 
 # are widely spread from each other, that is a reasonable indication that permutation importance is high. Because the range of effects is so sensitive to outliers, 
 # permutation importance is a better measure of what's generally important to the model.
+
+# From the graph, which do you think would typically have a bigger impact on predicted readmission risk:
+
+# Changing diag_1_428 from 0 to 1?
+# Changing payer_code_? from 0 to 1?
+
+shap.summary_plot(shap_values[1], small_val_X)
+
+
