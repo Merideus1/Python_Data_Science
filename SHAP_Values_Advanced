@@ -78,3 +78,14 @@ explainer = shap.TreeExplainer(my_model)
 shap_values = explainer.shap_values(small_val_X)
 
 shap.summary_plot(shap_values[1], small_val_X)
+
+# Do you believe the range of effects sizes (distance between smallest effect and largest effect) is a good indication of which feature will 
+# have a higher permutation importance? Why or why not?
+
+# If the range of effect sizes measures something different from permutation importance: which is a better answer for the question 
+# "Which of these two features does the model say is more important for us to understand when discussing readmission risks in the population?"
+
+# No. The width of the effects range is not a reasonable approximation to permutation importance. For that matter, the width of the range 
+# doesn't map well to any intuitive sense of "importance" because it can be determined by just a few outliers. However if all dots on the graph 
+# are widely spread from each other, that is a reasonable indication that permutation importance is high. Because the range of effects is so sensitive to outliers, 
+# permutation importance is a better measure of what's generally important to the model.
