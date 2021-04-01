@@ -107,3 +107,9 @@ bigger_effect_when_changed = "diag_1_428"
 # For example, there may be some diagnoses for which it is good to have many lab procedures, and other diagnoses where suggests increased risk. 
 # We don't yet know what other feature is interacting with num_lab_procedures though we could investigate that with SHAP contribution dependence plots.
 
+shap.summary_plot(shap_values[1], small_val_X)
+
+# Create the SHAP dependence contribution plots for each variable, and describe what you think is different between how these two variables affect predictions.
+
+shap.dependence_plot('num_lab_procedures', shap_values[1], small_val_X)
+shap.dependence_plot('num_medications', shap_values[1], small_val_X)
