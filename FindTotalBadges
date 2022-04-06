@@ -1,0 +1,12 @@
+> df = pd.read_csv(...)
+> df
+    Name		Age	Location	Badges	Tags
+0	John		  31	CA		    16		  asd-221
+1	Bob		    23	TX		    7		    hyub-875
+2	Jack		  27	TX		    np.nan  jbin-908
+3	Hannah	  26	CA		    11		  dsa-6757
+"""
+
+df.badges().sum()
+
+np.nan already gets skipped
